@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0d0d1a; }
+::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+/* ─── Selection color ─── */
+::selection { background: rgba(99,102,241,0.3); color: #fff; }
+
+/* ─── Base ─── */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+/* ─── Glass morphism utility ─── */
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+  .glow-border {
+    @apply border border-brand-500/40 shadow-[0_0_20px_rgba(99,102,241,0.15)];
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:border-brand-500/50 hover:shadow-[0_8px_40px_rgba(99,102,241,0.15)] hover:-translate-y-1;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-accent-purple to-accent-pink;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-accent-purple text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.4)] hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-ghost {
+    @apply glass border-white/10 hover:border-brand-500/50 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300 hover:bg-white/10;
+  }
+  .input-field {
+    @apply w-full bg-dark-600 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-brand-500/60 focus:shadow-[0_0_0_3px_rgba(99,102,241,0.15)] transition-all duration-200 text-sm;
+  }
+  .page-section {
+    @apply py-20 px-6 max-w-7xl mx-auto;
+  }
+}
+
+/* ─── Animated gradient background blobs ─── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: blobFloat 12s ease-in-out infinite;
+}
+.blob-1 { background: #6366f1; animation-delay: 0s; }
+.blob-2 { background: #a855f7; animation-delay: -4s; }
+.blob-3 { background: #06b6d4; animation-delay: -8s; }
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ─── Grid background ─── */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(99,102,241,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ─── Shimmer effect ─── */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ─── Gradient animated heading ─── */
+.heading-gradient {
+  background: linear-gradient(135deg, #818cf8, #a855f7, #ec4899, #818cf8);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 6s ease infinite;
+}
+
+/* ─── Custom cursor ─── */
+.cursor-dot {
+  width: 8px; height: 8px;
+  background: #6366f1;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s;
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 2px solid rgba(99,102,241,0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease-out;
+}
+.cursor-ring.hovering {
+  width: 60px; height: 60px;
+  border-color: rgba(99,102,241,0.8);
+  background: rgba(99,102,241,0.08);
+}
+
+/* ─── Progress bar animation ─── */
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--target-width); }
+}
+.animate-fill { animation: fillBar 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+/* ─── Number counter ─── */
+.count-up { font-variant-numeric: tabular-nums; }
