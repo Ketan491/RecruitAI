@@ -4,6 +4,7 @@
  */
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { useAuth } from './context/AuthContext'
 import CustomCursor from './components/cursor/CustomCursor'
 
@@ -85,6 +86,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
+      <SpeedInsights />
     </>
   )
 }
