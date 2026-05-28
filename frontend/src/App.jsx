@@ -5,6 +5,7 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { useAuth } from './context/AuthContext'
 import CustomCursor from './components/cursor/CustomCursor'
 
@@ -87,6 +88,7 @@ export default function App() {
         </Routes>
       </AnimatePresence>
       <SpeedInsights />
+      <VercelAnalytics />
     </>
   )
 }
