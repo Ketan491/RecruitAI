@@ -1,0 +1,23 @@
+{
+  // ── Explorer file nesting ──────────────────────────────────────────────────
+  // Groups related files under their parent so the explorer stays clean.
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.d.ts, ${capture}.test.ts, ${capture}.spec.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx, ${capture}.stories.tsx",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, .npmrc, .nvmrc, .node-version, commitlint.config.js",
+    "tailwind.config.*": "tailwind.config.*, postcss.config.*",
+    "vite.config.*": "vite.config.*, vitest.config.*",
+    ".env": ".env.*, .envrc",
+    "pyproject.toml": "setup.cfg, setup.py, requirements*.txt, .python-version, ruff.toml, .ruff.toml",
+    "docker-compose.yml": "docker-compose.*.yml, Dockerfile, .dockerignore",
+    "README.md": "CHANGELOG.md, CONTRIBUTING.md, LICENSE, .editorconfig, .prettierrc, .prettierignore, .eslintrc*, eslint.config.*"
+  },
+
+  // ── Workspace-level overrides (safe to commit, not personal) ──────────────
+  "editor.rulers": [100],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n"
+}

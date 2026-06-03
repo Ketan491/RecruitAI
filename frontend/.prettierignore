@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Generated files
+*.min.js
+*.min.css
+coverage/
+
+# Lock files — Prettier must never touch these
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Static assets
+public/
+*.svg
+
+# E2E artifacts
+../e2e/playwright-report/
+../e2e/test-results/

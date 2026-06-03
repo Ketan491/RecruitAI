@@ -1,0 +1,69 @@
+root = true
+
+# ── Default — all files ───────────────────────────────────────────────────────
+[*]
+charset                  = utf-8
+end_of_line              = lf
+indent_style             = space
+indent_size              = 2
+tab_width                = 2
+insert_final_newline     = true
+trim_trailing_whitespace = true
+max_line_length          = 100
+
+# ── JavaScript / TypeScript / JSX / TSX ──────────────────────────────────────
+[*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}]
+indent_size              = 2
+max_line_length          = 100
+
+# ── JSON ─────────────────────────────────────────────────────────────────────
+[*.{json,jsonc}]
+indent_size              = 2
+max_line_length          = 80
+
+# ── CSS / SCSS ────────────────────────────────────────────────────────────────
+[*.{css,scss,less}]
+indent_size              = 2
+
+# ── HTML ─────────────────────────────────────────────────────────────────────
+[*.html]
+indent_size              = 2
+max_line_length          = 120
+
+# ── Python ───────────────────────────────────────────────────────────────────
+# PEP 8 requires 4-space indentation
+[*.py]
+indent_size              = 4
+max_line_length          = 100
+
+# ── YAML ─────────────────────────────────────────────────────────────────────
+[*.{yaml,yml}]
+indent_size              = 2
+
+# ── TOML ─────────────────────────────────────────────────────────────────────
+[*.toml]
+indent_size              = 4
+
+# ── Markdown ──────────────────────────────────────────────────────────────────
+# trim_trailing_whitespace = false — two trailing spaces = <br> in Markdown
+[*.md]
+trim_trailing_whitespace = false
+max_line_length          = off
+
+# ── Shell scripts ─────────────────────────────────────────────────────────────
+[*.{sh,bash,zsh}]
+indent_size              = 2
+
+# ── Makefiles — MUST use tabs (Make breaks with spaces) ───────────────────────
+[Makefile]
+indent_style             = tab
+tab_width                = 4
+
+# ── Dockerfile ───────────────────────────────────────────────────────────────
+[Dockerfile*]
+indent_size              = 4
+
+# ── Lock files — never reformat these ────────────────────────────────────────
+[{package-lock.json,yarn.lock,pnpm-lock.yaml,bun.lockb}]
+insert_final_newline     = false
+trim_trailing_whitespace = false

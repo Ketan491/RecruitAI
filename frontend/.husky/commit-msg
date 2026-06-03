@@ -1,0 +1,6 @@
+# Enforce Conventional Commits: type(scope): description
+# Examples:
+#   feat(auth): add refresh token rotation
+#   fix(candidates): correct timezone import
+#   chore: update dependencies
+npx --no -- commitlint --edit "$1"

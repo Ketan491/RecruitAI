@@ -1,0 +1,56 @@
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# Data / validation
+pydantic==2.10.0
+pydantic[email]==2.10.0
+pydantic-settings==2.5.0
+email-validator==2.2.0
+
+# Database
+motor==3.5.0
+pymongo==4.17.0
+beanie==1.26.0
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.0
+
+# File handling
+python-multipart==0.0.9
+pdfplumber==0.11.0
+python-docx==1.1.2
+aiofiles==24.1.0
+
+# AI
+anthropic==0.38.0
+
+# PDF generation
+reportlab==4.2.0
+
+# Cloud storage
+boto3==1.36.0
+
+# HTTP client
+httpx==0.28.1
+
+# Rate limiting
+slowapi==0.1.9
+
+# Retry logic
+tenacity==8.3.0
+
+# Utilities
+python-dotenv==1.0.1
+aiosmtplib==3.0.1
+
+# Testing
+pytest==8.2.0
+pytest-asyncio==0.23.7
+anyio==4.4.0
+pytest-cov==5.0.0
+
+# Linting / formatting (dev)
+ruff==0.4.4

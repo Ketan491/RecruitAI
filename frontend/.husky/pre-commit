@@ -1,0 +1,2 @@
+# Run lint-staged on every commit — formats and lints only changed files
+npx lint-staged

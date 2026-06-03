@@ -1,0 +1,41 @@
+{
+  "recommendations": [
+    // ── Formatting & Linting ──────────────────────────────────────────────
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+
+    // ── TypeScript / React ────────────────────────────────────────────────
+    "yoavbls.pretty-ts-errors",
+    "christian-kohler.path-intellisense",
+
+    // ── Tailwind CSS ──────────────────────────────────────────────────────
+    "bradlc.vscode-tailwindcss",
+
+    // ── Python ────────────────────────────────────────────────────────────
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+
+    // ── Git ───────────────────────────────────────────────────────────────
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    // ── Testing ───────────────────────────────────────────────────────────
+    "ms-playwright.playwright",
+
+    // ── Docker ────────────────────────────────────────────────────────────
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+
+    // ── Database ──────────────────────────────────────────────────────────
+    "mtxr.sqltools",
+    "ckolkman.vscode-postgres",
+
+    // ── Utilities ─────────────────────────────────────────────────────────
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "unwantedRecommendations": [
+    "hookyqr.beautify"
+  ]
+}
