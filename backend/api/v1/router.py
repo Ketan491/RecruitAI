@@ -7,6 +7,7 @@ from .routes.candidates import router as candidates_router
 from .routes.dashboard import router as dashboard_router
 from .routes.jobs import router as jobs_router
 from .routes.pipeline import router as pipeline_router
+from .routes.weather import router as weather_router
 
 api_v1_router = APIRouter(prefix="/api/v1")
 
@@ -16,3 +17,4 @@ api_v1_router.include_router(jobs_router)
 api_v1_router.include_router(pipeline_router)
 api_v1_router.include_router(dashboard_router)
 api_v1_router.include_router(ai_router)
+api_v1_router.include_router(weather_router)
