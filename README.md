@@ -9,7 +9,7 @@ Full-stack recruitment platform with Claude AI-powered resume scoring, kanban pi
 | Frontend | React 18 + Vite + TypeScript + Tailwind CSS |
 | State | Zustand + TanStack Query |
 | Charts | Recharts |
-| Backend | FastAPI + Python 3.11 |
+| Backend | FastAPI + Python 3.12.10 |
 | Database | MongoDB Atlas (via Beanie ODM) |
 | AI | Anthropic Claude (`claude-sonnet-4-20250514`) |
 | File Storage | AWS S3 |
@@ -20,7 +20,7 @@ Full-stack recruitment platform with Claude AI-powered resume scoring, kanban pi
 
 ### Prerequisites
 - Node.js 20+
-- Python 3.11+
+- Python 3.12.10+
 - MongoDB (local or Atlas)
 - Anthropic API key
 
